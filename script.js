@@ -1,31 +1,47 @@
-console.log('hello world!!');
+let boolean = true;
+console.log(boolean)
+boolean = false;
+console.log(boolean);
+boolean = true && false && true;
+console.log (boolean);
+boolean = true || false || true;
+console.log (boolean);
+boolean = !true;
+console.log(boolean);
+boolean = true && false || true && !false;
+console.log(boolean);
+num = '10';
+boolean = num > 10;
+boolean = num < 10;
+boolean = num == 10;
+boolean = num === 10; // checks type and value
+boolean = num >= 10;
+boolean = num <= 10;
+boolean = num != 10;
+boolean = num !== 10; // checks type and value
+console.log(boolean);
 
-let num = 1;
-num = 3;
-num = 3 * 3 + 7 / 2 - 15;
-num = num +3;
-num += 3;
-num -= 2;
-num *= 3;
-num /= 2;
-num ++;
-num --;
-num = num**2;
-num **=2;
-num = 13;
-num = num % 7;
-num %= 2;
-// var text = 'hello'; Dont use var
+if(num == 10) {
+  console.log('võrdne kümnega');
+} else {
+    console.log('ei ole võrdne kümnega');
+}
+
+console.log(Boolean(num));
+console.log(Boolean('asdasd'));
+console.log(Boolean(0));
+console.log(Boolean(''));
+
+let  noValue = null;
+let  noValue2;
+console.log(noValue);
+console.log(noValue2);
+num = 1/0;
 console.log(num);
-let string = 'hello';
-console.log(string)
-string = "hello don't" ;
-console.log(string)
-string = ` hello
-im multi line
-string`;
-console.log(string)
-string = ` hello  number is: ${num}`;
-console.log(string)
-string = `hello number is` + num;
-console.log(string)
+num = -1/0;
+console.log(num);num = 0/0;
+console.log(num);
+num = 0 * -1;
+console.log(num);
+num = 0.1 + 0.2;
+console.log(num);
