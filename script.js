@@ -1,12 +1,12 @@
-let num1 = 0;
-let num2 = 1;
-let sum = 0;
-while(num2<4_000_000){
-    if(num2%2===0){
-        sum+=num2;
+
+for(let i=1; i<100; i++){
+    let prime = true;
+    for(let num=2; num<Math.floor(i/2); num++){
+        if(i%num===0){
+            prime= false;
+        }
     }
-    let temp = num2;
-    num2 = num1+num2;
-    num1 = temp;
+    if(prime){
+        console.log(i);
+    }
 }
-console.log(sum);
