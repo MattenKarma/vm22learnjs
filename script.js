@@ -1,10 +1,8 @@
-const fs = require('fs');
+const express = require('express');
+const app = express();
 
-let files = fs.readdirSync('.');
-console.log(files); 
+app.get('/', function (req, res) {
+  res.send('Hello World');
+});
 
-fs.writeFileSync('hello.txt', 'Hello!', {flag: 'a'});
-
-let html = fs.readFileSync('index.html');
-
-console.log(html.toString());
+app.listen(3000);
