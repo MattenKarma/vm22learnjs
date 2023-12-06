@@ -1,5 +1,21 @@
 {% extends 'partials/layout.njk' %}
 {% block title %}Home page {% endblock %}
 {% block content %}
-    <h1>Hello {{ name }}</h1>
+    {% if name and age %}
+    <h1>Hello {{ name }} you are {{age}} years old!</h1>
+    {% endif %}
+  <form action="/answer" method="POST">
+    <div class="mb-3">
+         <label for="name" class="form-label">Email address</label>
+         <input type="text" class="form-control" name="name" id="name" placeholder="Name here">
+   </div>
+      <div class="mb-3">
+         <label for="age" class="form-label">Age</label>
+         <input type="number" min="0" max="150" class="form-control" name="age" id="age" placeholder="How old are you?">
+   </div>
+      <div class="mb-3">
+         <input type="submit" class="btn btn-primary">
+   </div>
+   </form>
+
 {% endblock %}
