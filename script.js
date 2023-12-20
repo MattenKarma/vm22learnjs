@@ -8,9 +8,9 @@ nunjucks.configure('views', {
 });
 
 app.get('/', function (req, res) {
-  let name = req.query.name; 
-  let age = req.query.age; 
-  res.render('index.njk', {name, age});
+  let sideA = req.query.sideA; 
+  let sideB = req.query.sideB; 
+  res.render('index.njk', {sideA, sideB});
 });
 
 app.use(express.urlencoded());
@@ -18,7 +18,7 @@ app.use(express.urlencoded());
 app.post('/answer', function (req, res) {
   let name = req.body.name; 
   let age = req.body.age; 
-  res.render('answer.njk', {name, age});
+  res.render('answer.njk', {sideA, sideB});
 });
 
 app.get('/about', function (req, res) {
